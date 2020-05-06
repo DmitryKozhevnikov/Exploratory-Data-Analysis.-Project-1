@@ -16,11 +16,13 @@ unzip("Data.zip")
 # Reading and subsetting the data:
 dataSet <- read.table(file.path(wdir, "household_power_consumption.txt"), sep = ";", header = TRUE, na.strings = "?",
                       stringsAsFactors = FALSE)
-dataSet <- subset(dataSet, Date == "1/2/2007" | Date == "1/2/2007")
+dataSet <- dataSet[grep("^1/2/2007|^2/2/2007", dataSet$Date),]
 
 # Converting the "Date" and "Time" variables to Date/Time classes by "lubridate" package:
+dataSet$Time <- paste(dataSet$Date, dataSet$Time) # Changing the "Time" variable by concatenating the "Date" and the "Time" variables
+# to make plots correctly 
 dataSet$Date <- as.Date(dataSet$Date, "%d/%m/%Y")
-dataSet$Time <- strptime(dataSet$Time, "%H:%M:%S")
+dataSet$Time <- strptime(dataSet$Time, "%d/%m/%Y %H:%M:%S")
 
 # Saving the sudsetted data to data_set.txt file and remowing "household_power_consumption.txt" 
 # and "Data.zip" files from the work directory:
