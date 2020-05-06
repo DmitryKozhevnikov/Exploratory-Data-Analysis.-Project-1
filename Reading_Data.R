@@ -1,5 +1,5 @@
 # Author: Dmitry Kozhevnikov
-# Data: 05.05.2020
+# Data: 06.05.2020
 # John Hopkins University. Exploratory Data Analisys. Course Project 1.   
 
 # Program description:
@@ -13,7 +13,7 @@ url_dat <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_powe
 download.file(url_dat, file.path(wdir, "Data.zip"))
 unzip("Data.zip")
 
-# Reading and subsetting the data:
+# Reading and subsetting the data (memory volume required = 2 075 259 rows * 9 columns * 8 baytes = 142.5 Megabytes):
 dataSet <- read.table(file.path(wdir, "household_power_consumption.txt"), sep = ";", header = TRUE, na.strings = "?",
                       stringsAsFactors = FALSE)
 dataSet <- dataSet[grep("^1/2/2007|^2/2/2007", dataSet$Date),]
