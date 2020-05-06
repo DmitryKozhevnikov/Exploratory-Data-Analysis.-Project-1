@@ -1,6 +1,6 @@
 # Author: Dmitry Kozhevnikov
 # Data: 06.05.2020
-# John Hopkins University. Exploratory Data Analisys. Course Project 1.   
+# John Hopkins University. Exploratory Data Analisys. Course Project №1.   
 
 # Program description:
 # The aim of the program to prepare the data for the analysis. 
@@ -26,7 +26,7 @@ dataSet$Time <- strptime(dataSet$Time, "%d/%m/%Y %H:%M:%S")
 
 # Saving the sudsetted data to data_set.txt file and remowing "household_power_consumption.txt" 
 # and "Data.zip" files from the work directory:
-write.table(dataSet, file = "data.txt", sep = " ", row.name = FALSE)
+write.table(dataSet, file = "data.txt", sep = ";", row.name = FALSE)
 rm_file(file.path(wdir), "household_power_consumption.txt", "Data.zip")
 
 # Removing objects from an Environment
