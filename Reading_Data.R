@@ -1,6 +1,6 @@
 # Author: Dmitry Kozhevnikov
 # Data: 06.05.2020
-# John Hopkins University. Exploratory Data Analisys. Course Project 1.   
+# John Hopkins University. Exploratory Data Analisys. Course Project №1.   
 
 # Program description:
 # The aim of the program to prepare the data for the analysis. 
