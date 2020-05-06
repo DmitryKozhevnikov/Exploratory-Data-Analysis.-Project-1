@@ -3,8 +3,7 @@
 # John Hopkins University. Exploratory Data Analisys. Course Project 1.   
 
 #Program description:
-# The aim of the program to make a scatterplot for "Global_active_power" variable for the dates 2007-02-01 and 2007-02-02. 
-
+# The aim of the program to make a scatterplot for "Global_active_power" vs "Time" variables. 
 
 
 # Setting the work directory:
