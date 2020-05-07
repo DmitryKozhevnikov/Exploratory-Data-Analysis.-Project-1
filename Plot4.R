@@ -1,5 +1,5 @@
 # Author: Dmitry Kozhevnikov
-# Data: 06.05.2020
+# Data: 07.05.2020
 # John Hopkins University. Exploratory Data Analisys. Course Project 1.   
 
 #Program description:
