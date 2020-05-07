@@ -6,6 +6,7 @@
 # The aim of the program to make a scatterplot for "Global_active_power" vs "Time" variables. 
 
 
+
 # Setting the work directory:
 wdir <- getwd()
 

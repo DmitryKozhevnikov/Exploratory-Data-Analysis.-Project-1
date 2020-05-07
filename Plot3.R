@@ -6,6 +6,7 @@
 # The aim of the program to make a scatterplot for "Global_active_power" and "Sub_meteting" variables. 
 
 
+
 # Setting the work directory:
 wdir <- getwd()
 
@@ -18,12 +19,12 @@ dataSet$Time <- paste(dataSet$Date, dataSet$Time) # Changing the "Time" variable
 dataSet$Date <- as.Date(dataSet$Date, "%d/%m/%Y")
 dataSet$Time <- strptime(dataSet$Time, "%d/%m/%Y %H:%M:%S")
 
-# Making the Scatterplot for "Global_active_power" and "Times" variable:
+# Making the Scatterplot for "Global_active_power" and "Sub_meteting" variables:
 plot(dataSet$Time, dataSet$Sub_metering_1, xlab = "", ylab = "Energy sub metering", type = "l")
 lines(dataSet$Time, dataSet$Sub_metering_2, col = "red", type = "l")
 lines(dataSet$Time, dataSet$Sub_metering_3, col = "blue", type = "l")
 legend("topright", lty = 1, col = c("black", "red", "blue"), 
-       legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3", xjust = 1, yjust = 1))
+       legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), xjust = 1, yjust = 1)
 
 # Saving the Scatterplot to a PNG file with a width of 480 pixels and a height of 480 pixels:
 dev.copy(png, file = "Plot3.png", width = 480, height = 480)
