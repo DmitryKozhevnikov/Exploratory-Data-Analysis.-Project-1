@@ -23,7 +23,7 @@ plot(dataSet$Time, dataSet$Sub_metering_1, xlab = "", ylab = "Energy sub meterin
 lines(dataSet$Time, dataSet$Sub_metering_2, col = "red", type = "l")
 lines(dataSet$Time, dataSet$Sub_metering_3, col = "blue", type = "l")
 legend("topright", lty = 1, col = c("black", "red", "blue"), 
-       legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
+       legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3", xjust = 1, yjust = 1))
 
 # Saving the Scatterplot to a PNG file with a width of 480 pixels and a height of 480 pixels:
 dev.copy(png, file = "Plot3.png", width = 480, height = 480)
